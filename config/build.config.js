@@ -42,7 +42,12 @@ module.exports = {
     files: {
         app: {
             js:     ['<%= folders.src %>/**/*.js',     '!<%= folders.src %>/**/*.spec.js',     '!<%= folders.src %>/**/*.scenario.js'],
-            coffee: ['<%= folders.src %>/**/*.coffee', '!<%= folders.src %>/**/*.spec.coffee', '!<%= folders.src %>/**/*.scenario.coffee']
+            coffee: [
+                '<%= folders.src %>/**/*.coffee',
+                '!<%= folders.src %>/**/*.spec.coffee',
+                '!<%= folders.src %>/**/*.scenario.coffee',
+                '!<%= folders.src %>/test/*'
+            ]
         },
         test: {
             unit: {
