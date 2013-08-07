@@ -84,9 +84,13 @@ module.exports = function (grunt) {
             },
             kill_phantom: {
                 command: [
-                    'ps -eo pid,command | grep "phantomjs" | grep -v "grep" ',
+                    'ps -eo pid,command | grep "phantomjs" | grep -v "grep"',
                     'ps -eo pid,command | grep "phantomjs" | grep -v "grep" | awk "{ print $1 }" | xargs kill -9'
-                ].join('&&')
+                ].join(' && '),
+                options: {
+                    stdout: true,
+                    stderr: true
+                }
             },
             install_selenium: {
                 command: './node_modules/protractor/bin/install_selenium_standalone'
@@ -1034,7 +1038,7 @@ module.exports = function (grunt) {
     grunt.registerTask('watch', function () {
         grunt.task.run([
             'build',
-            'shell:kill_phantom',
+//            'shell:kill_phantom',
             'karma:watch_unit',            // single_run = false
             'karma:watch_midway',          // single_run = false
             //'express:e2e',  // to serve app to e2e tests

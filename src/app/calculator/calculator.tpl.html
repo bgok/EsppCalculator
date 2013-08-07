@@ -1,0 +1,23 @@
+<div ng-controller="EsppController">
+    <label>Start price: <input type="number" ng-model="data.startingPrice"/></label>
+    <Label>Ending price: <input type="number" ng-model="data.endingPrice"/></label>
+    <div>Strike price: <span ng-bind="getStrikePrice() | currency"></span></div>
+    <div>Available to invest: <span ng-bind="getInvestmentAmount() | currency"/></div>
+    <div>Shares purchased: <span ng-bind="getSharesPurchased()"/></div>
+    <section>
+        <h2>Per share</h2>
+        <div>Amount invested: <span ng-bind="getStrikePrice() | currency"/></div>
+        <div>Value: <span ng-bind="data.endingPrice | currency"/></div>
+        <div>Profit: <span ng-bind="getGrossProfitPerShare() | currency"/></div>
+        <div>Tax: <span ng-bind="getTaxPerShare() | currency"/></div>
+        <div>Net: <span ng-bind="getNetProfitPerShare() | currency"/></div>
+    </section>
+    <section>
+        <h2>Totals</h2>
+        <div>Amount invested: <span ng-bind=""/></div>
+        <div>Value: <span ng-bind="getTotalValue() | currency"/></div>
+        <div>Profit: <span ng-bind="getGrossProfit() | currency"/></div>
+        <div>Tax: <span ng-bind="getTaxOnTotal() | currency"/></div>
+        <div>Net: <span ng-bind="getNetProfit() | currency"/></div>
+    </section>
+</div>

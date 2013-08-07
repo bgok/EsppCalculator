@@ -35,4 +35,3 @@ describe "ngBoilerplate", ->
 
     it "should have ui.state dependency", ->
         expect(hasModule("ui.state")).is.true
-

@@ -10,11 +10,11 @@ angular.module('ngBoilerplate', [
     ])
 
     .config(function myAppConfig($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/calculator');
     })
 
     .run(function run(titleService) {
-        titleService.setSuffix(' | ngBoilerplate');
+        titleService.setSuffix(' | ESPP Calculator');
     })
 
     .controller('AppCtrl', function ($scope) {
