@@ -10,19 +10,20 @@ angular.module('EsppCalculator.services', [])
         taxRate: .25
         maxSharesPerPeriod: 1200
 
-angular.module('EsppCalculator.app', ['EsppCalculator.services'])
+angular.module('EsppCalculator.app', ['ui.state'])
 #    .config(($stateProvider) ->
+#        console.log 'config!'
 #        $stateProvider.state('calculator',
-#            url: '/calculator'
+#            url: ''
 #            views:
 #                main:
 #                    controller: 'EsppCalculator.controller'
-#                    templateUrl: 'calculator/calculator.tpl.html'
+#                    templateUrl: 'src/app/calculator/calculator.tpl.html'
 #            )
 #        )
-    .controller(($scope, initialData) ->
+    .controller('EsppCalculator.controller', ($scope, initialData) ->
         data = $scope.data = initialData
-
+        console.log 'GOT THERE!'
         _.extend $scope,
             getStrikePrice: ->
                 Math.min(data.startingPrice, data.endingPrice) * (100 - data.strikePriceDiscount) / 100

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="EsppCalculator.app">
+<!--<html>-->
   <head>
     <meta charset="utf-8"> 
     <title>Project Scaffold</title>
@@ -11,9 +12,9 @@
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
 
   </head>
-  <body>
-    <!--<div ui-view="main" ng-animate="animate"></div>-->
-    <div>
+  <body ng-controller="EsppCalculator.controller">
+    <!--<div ui-view="main"></div>-->
+    <div >
         <label>Start price:</label>
         <input type="number" ng-model="data.startingPrice">
         <Label>Ending price:</label>

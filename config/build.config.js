@@ -16,6 +16,7 @@ module.exports = {
      */
     folders: {
         build: '_build',
+        host: [ '_build', '.'],
         compile: '_dist',
         config: 'config',
         docs: 'docs',

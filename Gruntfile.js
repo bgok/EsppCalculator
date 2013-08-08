@@ -432,7 +432,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 9200,
                     hostname: 'localhost',
-                    bases: ['<%= folders.build %>']
+                    bases: userConfig.folders.host
                 }
             },
 
@@ -443,7 +443,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 9300,
                     hostname: 'localhost',
-                    bases: ['<%= folders.build %>']
+                    bases: userConfig.folders.host
                 }
             },
 
@@ -452,7 +452,7 @@ module.exports = function (grunt) {
                     livereload: true,
                     port: 9400,
                     hostname: 'localhost', // '*',  change this to '0.0.0.0' to access the server from outside
-                    bases: [ userConfig.folders.build ]
+                    bases: userConfig.folders.host
                 }
             }
         },
