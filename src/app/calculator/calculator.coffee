@@ -10,7 +10,7 @@ angular.module('EsppCalculator.services', [])
         taxRate: .25
         maxSharesPerPeriod: 1200
 
-angular.module('EsppCalculator.app', ['ui.state'])
+angular.module('EsppCalculator.app', ['ui.state', 'EsppCalculator.services', 'titleService'])
 #    .config(($stateProvider) ->
 #        console.log 'config!'
 #        $stateProvider.state('calculator',
@@ -21,7 +21,7 @@ angular.module('EsppCalculator.app', ['ui.state'])
 #                    templateUrl: 'src/app/calculator/calculator.tpl.html'
 #            )
 #        )
-    .controller('EsppCalculator.controller', ($scope, initialData) ->
+    .controller('EsppCalculator.controller', ($scope, initialData, titleService) ->
         data = $scope.data = initialData
         console.log 'GOT THERE!'
         _.extend $scope,

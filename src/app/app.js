@@ -5,6 +5,8 @@ angular.module('ngBoilerplate', [
         'templates-common',
         'ngBoilerplate.home',
         'ngBoilerplate.about',
+        'EsppCalculator.services',
+        'EsppCalculator.app',
         'ui.state',
         'ui.route'
     ])

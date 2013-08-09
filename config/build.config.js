@@ -97,10 +97,12 @@ module.exports = {
                 '<%= folders.vendor %>/angular-ui-utils/modules/route.js',
 
                 /* with angular-boostrap, do we need bootstrap-less ? */
-                '<%= folders.vendor %>/angular-bootstrap/ui-bootstrap-tpls.min.js'
+                '<%= folders.vendor %>/angular-bootstrap/ui-bootstrap-tpls.min.js',
 
                 /* pick and choose the boostrap modules you need */
                 //,'<%= folders.vendor %>/bootstrap-less/js/*.js'
+
+                '<%= folders.vendor %>/lodash/lodash.compat.js'
             ],
             less: [
                 /* include bootstrap-less files to make 'less' variables available to app styles */
